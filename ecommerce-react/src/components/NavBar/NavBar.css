@@ -1,22 +1,22 @@
 .main-header{
   width: 100%;
   display: flex;
-  padding: 10px 25px;
-  box-shadow: 1px 5px 15px grey;
+  padding: 0px 25px;
+  box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.479);
   box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
-  background-color: #081524;
+  background-color: #030522;
 }
 
 .navbar{
-    list-style: none;
-    display: flex;
-    margin-right: 30px;    
+  list-style: none;
+  display: flex;
+  margin-right: 30px;    
 }
 
 .navbar-logo{
-  width: 80px;
+  width: 50px;
 }
 
 .navbar li{
