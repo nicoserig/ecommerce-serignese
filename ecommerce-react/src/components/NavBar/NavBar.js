@@ -9,10 +9,10 @@ function NavBar(){
         <header className="main-header">
             <img src={Logo} className={'navbar-logo'} alt='logo'/>
             <ul className = {'navbar'}>
-                <li><Button><Home className={'li-btn-icon'} fontSize="small"/>Home</Button></li>
-                <li><Button><Category className={'li-btn-icon'} fontSize="small"/>Productos</Button></li>
-                <li><Button><Info className={'li-btn-icon'} fontSize="small"/>Nosotros</Button></li>
-                <li><Button><AlternateEmail className={'li-btn-icon'} fontSize="small"/>Contacto</Button></li>
+                <li><Button startIcon={<Home/>}>Home</Button></li>
+                <li><Button startIcon={<Category/>}>Productos</Button></li>
+                <li><Button startIcon={<Info/>}>Nosotros</Button></li>
+                <li><Button startIcon={<AlternateEmail/>}>Contacto</Button></li>
             </ul>
         </header>
     );
