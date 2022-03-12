@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '@mui/material/Button'
 import './NavBar.css'
-import Logo from './logonb3.png'
+import Logo from './logo/logonb3.png'
 import { Home, Category, Info, AlternateEmail} from '@mui/icons-material';
 
 function NavBar(){
