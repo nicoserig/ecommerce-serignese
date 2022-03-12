@@ -17,6 +17,13 @@
 
 .navbar-logo{
   width: 50px;
+  padding-left: 25px;
+}
+
+.navbar-logo-wrn{
+  width: 65px;
+  margin-right: auto;
+  padding-left: 5px;
 }
 
 .navbar li{
