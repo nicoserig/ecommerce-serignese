@@ -1,0 +1,33 @@
+.navbar{
+    list-style: none;
+    display: flex;
+    margin-right: 30px;    
+  }
+
+.navbar li{
+  margin-right: 20px;
+}
+
+.navbar li Button {
+  color: aliceblue;
+  font-family:'Calibri';
+}
+
+.li-btn-icon {
+  margin-right: 5px;
+}
+
+.navbar-logo{
+    width: 150px;
+}
+
+.main-header{
+  width: 100%;
+  display: flex;
+  padding: 10px 25px;
+  box-shadow: 1px 5px 15px grey;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #081524;
+}
