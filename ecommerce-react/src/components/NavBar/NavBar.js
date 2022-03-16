@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '@mui/material/Button'
+import CartWidget from '../CartWidget/CartWidget'
 import './NavBar.css'
 import Logo from './logo/logonb3.png'
 import LogoWRN from './logo/logowrn.png'
@@ -15,6 +16,7 @@ function NavBar(){
                 <li><Button startIcon={<Category/>}>Productos</Button></li>
                 <li><Button startIcon={<Info/>}>Nosotros</Button></li>
                 <li><Button startIcon={<AlternateEmail/>}>Contacto</Button></li>
+                <li><CartWidget /></li>
             </ul>
         </header>
     );
