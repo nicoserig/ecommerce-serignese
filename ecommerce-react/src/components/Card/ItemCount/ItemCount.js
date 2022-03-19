@@ -28,7 +28,7 @@ function ItemCount({stock=5, initial=0, onAdd}){
                 <p>{count}</p>
                 <Button onClick={(addCount)}>+</Button>
             </div>
-            <Button className='btn-cart' startIcon={<AddShoppingCartIcon/>} variant={'contained'}>Agregar</Button>
+            <Button onClick={onAdd} sx={{marginTop:'10px'}} className="btn-cart" startIcon={<AddShoppingCartIcon/>} variant={'contained'}>Agregar</Button>
         </div>
     );
 }
