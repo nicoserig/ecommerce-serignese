@@ -6,9 +6,9 @@ import Typography from '@mui/material/Typography';
 import ItemCount from './ItemCount/ItemCount';
 import Image from './SM-placeholder.png'
 import './Card.css'
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { CardActionArea, CardActions } from '@mui/material';
 
-export default function MuiCard() {
+export default function MuiCard({stock, initial}) {
   return (
     <Card sx={{ maxWidth: 250 }}>
       <CardActionArea>
@@ -28,7 +28,7 @@ export default function MuiCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <ItemCount initial={0}/>
+        <ItemCount initial={initial} stock={stock}/>
       </CardActions>
     </Card>
   );

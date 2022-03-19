@@ -5,7 +5,7 @@ import './ItemListContainer.css'
 function ItemListContainer({greeting}){
     return(
         <div className='back'>
-            <MuiCard />
+            <MuiCard />            
         </div>
     );
 }
