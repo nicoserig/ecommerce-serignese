@@ -1,12 +1,11 @@
 import React from 'react'
+import MuiCard from '../Card/Card';
 import './ItemListContainer.css'
 
 function ItemListContainer({greeting}){
     return(
         <div className='back'>
-            <div className='div'>
-                <p>{greeting}</p>
-            </div>
+            <MuiCard />
         </div>
     );
 }

@@ -10,20 +10,3 @@
     bottom:0px;
     top:68px
 }
-
-.div{
-    background: linear-gradient(
-        to right, 
-        rgb(35, 55, 236), 
-        rgb(87, 238, 11)
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-}
-
-.div p{
-    font-size: 100px;
-    text-align: center;
-    color: white;
-}
