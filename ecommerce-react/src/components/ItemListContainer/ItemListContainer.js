@@ -3,8 +3,10 @@ import './ItemListContainer.css'
 
 function ItemListContainer({greeting}){
     return(
-        <div className='div'>
-            <p>{greeting}</p>
+        <div className='back'>
+            <div className='div'>
+                <p>{greeting}</p>
+            </div>
         </div>
     );
 }

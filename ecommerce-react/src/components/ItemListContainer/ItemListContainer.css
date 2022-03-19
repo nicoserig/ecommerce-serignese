@@ -1,12 +1,29 @@
-.div {
+.back {
     width: 100%;
-    display: flex;
+    display:flex;
     padding: 0px 25px;
     align-items: center;
     justify-content: space-between;
-    background-color: #ffffff;
+    box-sizing: border-box;
+    background: rgb(23, 36, 63);
+    position:absolute;
+    bottom:0px;
+    top:68px
+}
+
+.div{
+    background: linear-gradient(
+        to right, 
+        rgb(35, 55, 236), 
+        rgb(87, 238, 11)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
 }
 
 .div p{
     font-size: 100px;
+    text-align: center;
+    color: white;
 }
