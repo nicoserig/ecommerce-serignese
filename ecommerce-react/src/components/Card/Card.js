@@ -8,7 +8,7 @@ import Image from './SM-placeholder.png'
 import './Card.css'
 import { CardActionArea, CardActions } from '@mui/material';
 
-export default function MuiCard({stock, initial, title, description}) {
+export default function MuiCard({stock, initial, title, description, onAdd}) {
   return (
     <Card sx={{ maxWidth: 250 }}>
       <CardActionArea>
@@ -28,7 +28,7 @@ export default function MuiCard({stock, initial, title, description}) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <ItemCount initial={initial} stock={stock}/>
+        <ItemCount initial={initial} stock={stock} onAdd={onAdd}/>
       </CardActions>
     </Card>
   );
