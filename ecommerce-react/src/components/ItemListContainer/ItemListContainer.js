@@ -1,6 +1,6 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
-import MuiCard from '../Card/Card';
+import Item from '../Item/Item';
 import './ItemListContainer.css'
 
 // Import Swiper styles
@@ -73,19 +73,19 @@ function ItemListContainer({title}){
     return(
         <>
             <div className='back'>
-            <h2 className='title'>{title}</h2>
-            <Swiper effect={"coverflow"} grabCursor={true} loop={true} centeredSlides={true} initialSlide={3} slidesPerView={5} keyboard={{enabled:true}} navigation={true} coverflowEffect={{rotate: 25, stretch: 0, depth: 100, modifier: 1, slideShadows: true}}  modules={[EffectCoverflow, Pagination, Navigation, Keyboard]} className="mySwiper">
-                {products.map( (product) => {
-                    // convierto el precio a string con formato moneda USD
-                    let price = product.price.toLocaleString('en-US', {style: 'currency', currency:'USD'});
-                    return(
-                        // se crea el Card y se le pasan todas las props basados en el mock
-                        <SwiperSlide>
-                            <MuiCard title={product.title} description={product.description} stock={product.stock} price={price} onAdd={onAddFx}/>
-                        </SwiperSlide>
-                    )
-                })}
-            </Swiper>                    
+                <h2 className='title'>{title}</h2>
+                <Swiper effect={"coverflow"} grabCursor={true} loop={true} centeredSlides={true} initialSlide={3} slidesPerView={5} keyboard={{enabled:true}} navigation={true} modules={[Pagination, Navigation, Keyboard]} className="mySwiper">
+                    {products.map( (product) => {
+                        // convierto el precio a string con formato moneda USD
+                        let price = product.price.toLocaleString('en-US', {style: 'currency', currency:'USD'});
+                        return(
+                            // se crea el Card y se le pasan todas las props basados en el mock
+                            <SwiperSlide>
+                                <Item title={product.title} description={product.description} stock={product.stock} price={price} onAdd={onAddFx}/>
+                            </SwiperSlide>
+                        )
+                    })}
+                </Swiper>                    
             </div>
         </>
     );
