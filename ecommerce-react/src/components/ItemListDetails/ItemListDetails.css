@@ -1,0 +1,49 @@
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "cover content";
+    box-shadow:-2px 0px 33px 0px rgba(0,0,0,0.75);
+}
+
+.cover{
+    grid-area: cover;
+    height: 90vh;
+    background-size: cover;
+    background-position: center center;
+}
+.content{
+    grid-area: content;
+    background:#efefef;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.content-body{
+    display: flex;
+    flex-direction: row;
+}
+
+.black-label{
+    width: 100%;
+    margin-top: 10%;
+}
+
+.black-label p{
+    font-size: 18px;
+    color: gray;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.title{
+    font-size: 64px;
+    color: black;
+}
+
+.itemCount{
+    width: 50%;
+    padding-left: 25%;
+}

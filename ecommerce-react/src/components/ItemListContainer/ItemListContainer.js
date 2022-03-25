@@ -9,46 +9,9 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
-import { Keyboard, Navigation, EffectCoverflow, Pagination } from "swiper";
+import { Keyboard, Navigation, Pagination } from "swiper";
 
-function ItemListContainer({title}){
-    // creo mock de productos
-    const mockProducts = [{
-        title: 'Producto 1',
-        description: 'Descripción del producto 1',
-        price: 20000.9999,
-        stock: 10
-    },
-    {
-        title: 'Producto 2',
-        description: 'Descripción del producto 2',
-        price: 2500,
-        stock: 18
-    },
-    {
-        title: 'Producto 3',
-        description: 'Descripción del producto 3',
-        price: 300,
-        stock: 5
-    },
-    {
-        title: 'Producto 4',
-        description: 'Descripción del producto 4',
-        price: 800,
-        stock: 2
-    },
-    {
-        title: 'Producto 5',
-        description: 'Descripción del producto 5',
-        price: 330.5,
-        stock: 100
-    },
-    {
-        title: 'Producto 6',
-        description: 'Descripción del producto 6',
-        price: 800,
-        stock: 2
-    },]
+function ItemListContainer({title, apiProducts}){
     
     // genero el setProducts
     const [products, setProducts] = useState([])
@@ -56,7 +19,7 @@ function ItemListContainer({title}){
     // genero la función getProducts
     const getProducts = () => {
         return new Promise((resolve, reject) => {
-            return resolve(mockProducts)
+            return resolve(apiProducts)
         })
     }
 
@@ -81,7 +44,7 @@ function ItemListContainer({title}){
                         return(
                             // se crea el Card y se le pasan todas las props basados en el mock
                             <SwiperSlide>
-                                <Item title={product.title} description={product.description} stock={product.stock} price={price} onAdd={onAddFx}/>
+                                <Item title={product.title} description={product.description} stock={product.stock} price={price} onAdd={onAddFx} itemImg={product.img}/>
                             </SwiperSlide>
                         )
                     })}
