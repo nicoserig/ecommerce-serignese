@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useState} from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -8,7 +9,13 @@ import Image from './SM-placeholder.png'
 import './Card.css'
 import { CardActionArea, CardActions } from '@mui/material';
 
-export default function MuiCard({stock, initial, title, description, onAdd}) {
+export default function MuiCard({stock, initial, title, description, price, onAdd}) {
+  const [totalPrice, setTotalPrice] = useState()
+  
+  const getTotalPrice = (stock, ) => {
+
+  }
+
   return (
     <Card sx={{ maxWidth: 250 }}>
       <CardActionArea>
@@ -24,6 +31,9 @@ export default function MuiCard({stock, initial, title, description, onAdd}) {
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {description}
+          </Typography>
+          <Typography variant="h5" color="green" className='price-lbl'>
+            {price}
           </Typography>
         </CardContent>
       </CardActionArea>
