@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <NavBar inCart={0}/>
-      <ItemListContainer/>
+      <ItemListContainer title={'¡Nuevos productos!'}/>
     </div>
   );
 }

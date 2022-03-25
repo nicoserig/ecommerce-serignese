@@ -1,8 +1,17 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
+import { Swiper, SwiperSlide } from "swiper/react";
 import MuiCard from '../Card/Card';
 import './ItemListContainer.css'
 
-function ItemListContainer(){
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+// import required modules
+import { Keyboard, Navigation, EffectCoverflow, Pagination } from "swiper";
+
+function ItemListContainer({title}){
     // creo mock de productos
     const mockProducts = [{
         title: 'Producto 1',
@@ -33,7 +42,13 @@ function ItemListContainer(){
         description: 'Descripción del producto 5',
         price: 330.5,
         stock: 100
-    }]
+    },
+    {
+        title: 'Producto 6',
+        description: 'Descripción del producto 6',
+        price: 800,
+        stock: 2
+    },]
     
     // genero el setProducts
     const [products, setProducts] = useState([])
@@ -56,16 +71,23 @@ function ItemListContainer(){
         alert("Add to cart - Placeholder")
     }
     return(
-        <div className='back'>
-            {/* Se agregan cards con prop de stock */}
-            {products.map( (product) => {
-                
-                let price = product.price.toLocaleString('en-US', {style: 'currency', currency:'USD'});
-                return(
-                    <MuiCard title={product.title} description={product.description} stock={product.stock} price={price} onAdd={onAddFx}/>
-                )
-            })}                    
-        </div>
+        <>
+            <div className='back'>
+            <h2 className='title'>{title}</h2>
+            <Swiper effect={"coverflow"} grabCursor={true} loop={true} centeredSlides={true} initialSlide={3} slidesPerView={5} keyboard={{enabled:true}} navigation={true} coverflowEffect={{rotate: 25, stretch: 0, depth: 100, modifier: 1, slideShadows: true}}  modules={[EffectCoverflow, Pagination, Navigation, Keyboard]} className="mySwiper">
+                {products.map( (product) => {
+                    // convierto el precio a string con formato moneda USD
+                    let price = product.price.toLocaleString('en-US', {style: 'currency', currency:'USD'});
+                    return(
+                        // se crea el Card y se le pasan todas las props basados en el mock
+                        <SwiperSlide>
+                            <MuiCard title={product.title} description={product.description} stock={product.stock} price={price} onAdd={onAddFx}/>
+                        </SwiperSlide>
+                    )
+                })}
+            </Swiper>                    
+            </div>
+        </>
     );
 }
 

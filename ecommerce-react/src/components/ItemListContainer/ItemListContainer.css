@@ -1,12 +1,33 @@
 .back {
     width: 100%;
     display:flex;
-    padding: 0px 25px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 25px 25px;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
     background: rgb(23, 36, 63);
-    position:absolute;
-    bottom:0px;
-    top:68px
+    /* bottom:0px; */
+    /* top:68px */
+}
+
+.title {
+    width: 100%;
+    font-size: 25px;
+    color: white;
+    font-family: Tahoma;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 350px;
+    height: 350px;
 }
