@@ -50,8 +50,8 @@ function App() {
   return (
     <div>
       <NavBar inCart={0}/>
-      {/* <ItemListContainer title={'¡Nuevos ingresos!'} apiProducts={mockProducts}/> */}
-      <ItemListDetails />
+      <ItemListContainer title={'¡Nuevos ingresos!'} apiProducts={mockProducts}/>
+      <ItemListDetails title={'Audi A3 Sport 2023'} price={50000} description={"Último modelo, máximo confort."} stock={20} prodImg={'audi4.webp'}/>
     </div>
   );
 }

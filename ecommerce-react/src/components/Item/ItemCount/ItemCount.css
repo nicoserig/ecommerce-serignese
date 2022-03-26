@@ -16,9 +16,12 @@
     justify-content: space-between;
     font-size: small;
     text-align: center;
-    line-height: 5px;
 }
 
+.box p{
+    align-self: center;
+    text-align: center;
+}
 .btn-cart{
     width: 100%;
     margin-top: 15px;

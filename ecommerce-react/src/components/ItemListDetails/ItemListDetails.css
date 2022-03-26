@@ -1,7 +1,7 @@
 .container{
     width: 100%;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
     grid-template-areas: "cover content";
     box-shadow:-2px 0px 33px 0px rgba(0,0,0,0.75);
 }
@@ -28,10 +28,10 @@
 
 .black-label{
     width: 100%;
-    margin-top: 10%;
+    margin-top: 20%;
 }
 
-.black-label p{
+.descrip{
     font-size: 18px;
     color: gray;
     width: 50%;
@@ -46,4 +46,16 @@
 .itemCount{
     width: 50%;
     padding-left: 25%;
+}
+
+.price{
+    padding-top: 50px;
+    color: green;
+    font-size: 30px;
+}
+
+.photo{
+    position: absolute;
+    width: 50%;
+    padding-top: 5vh;
 }

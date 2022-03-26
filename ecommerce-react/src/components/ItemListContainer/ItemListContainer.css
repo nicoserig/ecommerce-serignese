@@ -8,11 +8,9 @@
     justify-content: space-between;
     box-sizing: border-box;
     background: rgb(23, 36, 63);
-    /* bottom:0px; */
-    /* top:68px */
 }
 
-.title {
+.h2title {
     width: 100%;
     font-size: 25px;
     color: white;
