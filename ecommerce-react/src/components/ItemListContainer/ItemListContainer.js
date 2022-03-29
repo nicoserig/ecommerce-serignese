@@ -19,7 +19,10 @@ function ItemListContainer({title, apiProducts}){
     // genero la función getProducts
     const getProducts = () => {
         return new Promise((resolve, reject) => {
-            return resolve(apiProducts)
+            setTimeout( () => {
+                return resolve(apiProducts)
+            }, 2000);
+            
         })
     }
 
