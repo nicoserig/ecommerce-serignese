@@ -34,3 +34,9 @@
   color: white;
   font-family: Tahoma;
 }
+
+.navbar li Button a{
+  text-decoration: none;
+  color: white;
+  font-family: Tahoma;
+}
