@@ -10,11 +10,11 @@ import { CardActionArea, CardActions } from '@mui/material';
 
 export default function Item({stock, initial, title, description, price, itemImg = Image, onAdd}) {
   return (
-    <Card sx={{ maxWidth: 250 }}>
+    <Card className='cardItem'>
       <CardActionArea>
         <CardMedia
+          className='img'
           component="img"
-          height="140"
           image={itemImg}
           alt="placeholder image"
         />
