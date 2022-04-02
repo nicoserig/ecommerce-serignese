@@ -1,8 +1,14 @@
-function HomePage() {
-  return (
-    <div>
-      <h1>This is my homepage!</h1>
-    </div>
+import React from 'react'
+import './HomePage.css'
+
+function HomePage(){
+  return(
+      <div className='back'>
+          <div className='div'>
+              <p>¡Bienvenid@!</p>
+              <p>Accedé a las mejores promociones y precios.</p>
+          </div>
+      </div>
   );
 }
 
