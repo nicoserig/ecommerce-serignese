@@ -19,7 +19,7 @@ function ItemListContainer({title, allProducts}){
         <>
             <div className='back'>
                 <h2 className='h2title'>{title}</h2>
-                <Swiper effect={"coverflow"} grabCursor={true} loop={true} centeredSlides={true} initialSlide={3} slidesPerView={5} keyboard={{enabled:true}} navigation={true} modules={[Pagination, Navigation, Keyboard]} className="mySwiper">
+                <Swiper effect={"coverflow"} grabCursor={true} loop={true} centeredSlides={true} initialSlide={3} slidesPerView={5} keyboard={{enabled:true}} navigation={false} modules={[Pagination, Navigation, Keyboard]} className="mySwiper">
                     {allProducts.map( (product) => {
                         // convierto el precio a string con formato moneda USD
                         let price = product.price.toLocaleString('en-US', {style: 'currency', currency:'USD'});

@@ -3,18 +3,22 @@
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 25px 25px;
+    padding: 25px 10%;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
+    border-color: white;
+    border-style: solid;
+    border-radius: 10px;
     background: rgba(0, 0, 0, 0.863);
 }
 
 .h2title {
     width: 100%;
-    font-size: 25px;
+    font-size: 35px;
     color: white;
     font-family: Tahoma;
+    text-align: center;
 }
 
 .swiper {

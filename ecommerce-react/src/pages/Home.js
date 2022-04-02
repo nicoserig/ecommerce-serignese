@@ -7,7 +7,7 @@ function HomePage({products}){
       <>
         <div className='back-home'>
             <div className='div-home'>
-                <p>La tienda N°1 en ventas del país</p>
+                <p>La tienda #1 en ventas del país.</p>
             </div>
         </div>
         <ItemListContainer title={'Novedades del mes'} allProducts={products}/>
