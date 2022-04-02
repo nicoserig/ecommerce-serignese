@@ -8,7 +8,9 @@ import { Link } from 'react-router-dom';
 function NavBar({inCart}){
     return(
         <header className="main-header">
-            <img src={Logo} className={'navbar-logo'} alt='logo'/>
+            <Link to={'/'}>
+                <img src={Logo} className={'navbar-logo'} alt='logo'/>
+            </Link>
             <ul className = {'navbar'}>
                 <li><Button >
                         <Link to={'/'}>Home</Link>
