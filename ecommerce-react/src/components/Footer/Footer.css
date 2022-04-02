@@ -1,31 +1,22 @@
 .main-footer{
     width: 100%;
-    display: flex;
     box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.479);
     box-sizing: border-box;
-    align-items: center;
-    justify-content:center;
     background-color: #000000d0;
-    margin-bottom: 50px;
   }
   
-  .footer{
-    list-style: none;
-    display: flex;
+  .main-footer p{
+      color: rgb(255, 255, 255);
+      text-align: center;
+      padding-top: 20px;
   }
-  
-  .footer li{
-    margin-right: 40px;
+
+  .icon-btn {
+      color: white;
   }
-  
-  .footer li Button{
-    color: rgb(0, 0, 0);
-    font-family: Tahoma;
-    font-size: 12px;
-  }
-  
-  .footer li Button a{
-    text-decoration: none;
-    color: white;
-    font-family: Tahoma;
+
+  .stack-style{
+      display: flex;
+      width: 100%;
+      justify-content:center;
   }
