@@ -3,7 +3,6 @@ import React from 'react';
 // components
 import IconButton from '@mui/material/IconButton';
 import Stack from '@mui/material/Stack';
-import Grid from '@mui/material/Grid';
 
 // icons
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -16,14 +15,14 @@ function Footer(){
         <footer className="main-footer">
             <div>
                 <p>Todos los derechos reservados - WRN 2022 ©</p>
-                <Stack direction="row" spacing={5} className='stack-style'>
-                    <IconButton aria-label="instagram" className='icon-btn'>
+                <Stack direction="row" spacing={2} className='stack-style'>
+                    <IconButton aria-label="instagram" className='icon-btn-style'>
                         <InstagramIcon />
                     </IconButton>
-                    <IconButton aria-label="facebook" className='icon-btn'>
+                    <IconButton aria-label="facebook" className='icon-btn-style'>
                         <FacebookIcon />
                     </IconButton>
-                    <IconButton aria-label="linkedin" className='icon-btn'>
+                    <IconButton aria-label="linkedin" className='icon-btn-style'>
                         <LinkedInIcon />
                     </IconButton>
                 </Stack>

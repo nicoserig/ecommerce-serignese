@@ -19,7 +19,7 @@ export default function Item({stock, initial, title, description, price, itemImg
           alt="placeholder image"
         />
         <CardContent className='content'>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="body1" component="div">
             {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
