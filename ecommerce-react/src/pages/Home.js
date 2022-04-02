@@ -7,10 +7,11 @@ function HomePage({products}){
       <>
         <div className='back-home'>
             <div className='div-home'>
-                <p>¡Bienvenid@!</p>
+                <p>La tienda N°1 en ventas del país</p>
             </div>
         </div>
-        <ItemListContainer title={'This is a test'} allProducts={products}/>
+        <ItemListContainer title={'Novedades del mes'} allProducts={products}/>
+        <ItemListContainer title={'Los más vendidos'} allProducts={products}/>
       </>
   );
 }

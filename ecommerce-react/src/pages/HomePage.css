@@ -13,8 +13,8 @@
 .div-home {
     background: linear-gradient(
         to right, 
-        rgb(35, 55, 236), 
-        rgb(87, 238, 11)
+        rgb(91, 92, 107), 
+        rgb(0, 0, 0)
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
