@@ -1,38 +1,31 @@
 .main-header{
   width: 100%;
   display: flex;
-  padding: 0px 25px;
   box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.479);
   box-sizing: border-box;
   align-items: center;
-  justify-content: space-between;
-  background-color: #030522;
+  justify-content:center;
+  background-color: #000000d0;
 }
 
 .navbar{
   list-style: none;
   display: flex;
-  margin-right: 30px;    
 }
 
 .navbar-logo{
-  width: 50px;
-  padding-left: 25px;
-}
+  width: 30px;
 
-.navbar-logo-wrn{
-  width: 65px;
-  margin-right: auto;
-  padding-left: 5px;
 }
 
 .navbar li{
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 .navbar li Button{
   color: white;
   font-family: Tahoma;
+  font-size: 12px;
 }
 
 .navbar li Button a{

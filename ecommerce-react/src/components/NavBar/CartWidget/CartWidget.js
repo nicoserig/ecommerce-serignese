@@ -5,7 +5,7 @@ import './CartWidget.css'
 
 function CartWidget({inCart = 0}){
     return(
-        <Button startIcon={<ShoppingCart/>} variant='contained' >{inCart}</Button>
+        <Button startIcon={<ShoppingCart/>} variant='contained'>{inCart}</Button>
     );
 }
 

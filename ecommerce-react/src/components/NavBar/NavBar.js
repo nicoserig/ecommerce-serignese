@@ -3,24 +3,21 @@ import Button from '@mui/material/Button'
 import CartWidget from './CartWidget/CartWidget'
 import './NavBar.css'
 import Logo from './logo/logonb3.png'
-import LogoWRN from './logo/logowrn.png'
-import { Home, Category, Info, AlternateEmail } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
 function NavBar({inCart}){
     return(
         <header className="main-header">
             <img src={Logo} className={'navbar-logo'} alt='logo'/>
-            <img src={LogoWRN} className={'navbar-logo-wrn'} alt='logo wrn'/>
             <ul className = {'navbar'}>
-                <li><Button startIcon={<Home/>}>
+                <li><Button >
                         <Link to={'/'}>Home</Link>
                     </Button></li>
-                <li><Button startIcon={<Category/>}>
+                <li><Button >
                         <Link to={'/productos'}>Productos</Link>
                     </Button></li>
-                <li><Button startIcon={<Info/>}>Nosotros</Button></li>
-                <li><Button startIcon={<AlternateEmail/>}>Contacto</Button></li>
+                <li><Button >Nosotros</Button></li>
+                <li><Button >Contacto</Button></li>
                 <li><CartWidget inCart={inCart}/></li>
             </ul>
         </header>
