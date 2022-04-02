@@ -1,4 +1,4 @@
-.back {
+.back-home {
     width: 100%;
     display:flex;
     padding: 0px 25px;
@@ -11,7 +11,7 @@
     position:absolute;
 }
 
-.div{
+.div-home {
     background: linear-gradient(
         to right, 
         rgb(35, 55, 236), 
@@ -22,7 +22,7 @@
     text-align: center;
 }
 
-.div p{
+.div-home p{
     font-size: 100px;
     text-align: center;
     color: white;
