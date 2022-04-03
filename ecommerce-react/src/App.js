@@ -8,9 +8,10 @@ import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 
 // pages
-import HomePage from './pages/Home';
+import HomePage from './pages/Home/Home';
 import ProductsPage from './pages/Products';
 import NotFoundPage from './pages/NotFound';
+import ContactPage from './pages/Contact';
 
 
 function App() {
@@ -129,10 +130,11 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <NavBar inCart={1}/>
+        <NavBar inCart={0}/>
         <Routes>
           <Route path='/' element={<HomePage products={products}/>}/>
           <Route path='/productos' element={<ProductsPage products={products}/>}/>
+          <Route path='/contacto' element={<ContactPage />}/>
           <Route path='*' element={<NotFoundPage />}/>
         </Routes>
         <Footer />

@@ -19,7 +19,9 @@ function NavBar({inCart}){
                         <Link to={'/productos'}>Productos</Link>
                     </Button></li>
                 <li><Button >Nosotros</Button></li>
-                <li><Button >Contacto</Button></li>
+                <li><Button >
+                    <Link to={'/contacto'}>Contacto</Link>
+                </Button></li>
                 <li><CartWidget inCart={inCart}/></li>
             </ul>
         </header>

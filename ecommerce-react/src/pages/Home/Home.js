@@ -1,6 +1,6 @@
 import React from 'react'
 import './HomePage.css'
-import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
+import ItemListContainer from '../../components/ItemListContainer/ItemListContainer';
 
 function HomePage({products}){
   return(
