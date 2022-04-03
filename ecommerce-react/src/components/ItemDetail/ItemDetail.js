@@ -2,7 +2,7 @@ import ItemCount from '../Item/ItemCount/ItemCount'
 import './ItemDetail.css'
 import { Container } from '@mui/material';
 
-function ItemListDetails({title, author, description, price, stock, prodImg, onAdd}){
+function ItemDetail({title, author, description, price, stock, prodImg, onAdd}){
     let prodPrice = price.toLocaleString('en-US', {style: 'currency', currency:'USD'});
     const getStock = (stock) => {
         if(stock === 1){
@@ -38,4 +38,4 @@ function ItemListDetails({title, author, description, price, stock, prodImg, onA
     );
 }
 
-export default ItemListDetails
+export default ItemDetail
