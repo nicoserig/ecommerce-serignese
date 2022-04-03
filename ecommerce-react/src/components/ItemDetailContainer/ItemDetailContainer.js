@@ -1,5 +1,5 @@
 import ItemCount from '../Item/ItemCount/ItemCount'
-import './ItemListDetails.css'
+import './ItemDetailContainer.css'
 import { Container } from '@mui/material';
 
 function ItemListDetails({title, description, price, stock, prodImg, onAdd}){

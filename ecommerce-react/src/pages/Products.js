@@ -1,6 +1,5 @@
 import React from 'react'
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
-import ItemListDetails from '../components/ItemListDetails/ItemListDetails';
 import ItemDetail from '../components/ItemDetail/ItemDetail'
 
 function ProductsPage({products}) {
