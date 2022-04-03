@@ -16,13 +16,13 @@ function Footer(){
             <div>
                 <p>Todos los derechos reservados - WRN 2022 ©</p>
                 <Stack direction="row" spacing={2} className='stack-style'>
-                    <IconButton aria-label="instagram" className='icon-btn-style'>
+                    <IconButton aria-label="instagram" sx={{color:'white'}}>
                         <InstagramIcon />
                     </IconButton>
-                    <IconButton aria-label="facebook" className='icon-btn-style'>
+                    <IconButton aria-label="facebook" sx={{color:'white'}}>
                         <FacebookIcon />
                     </IconButton>
-                    <IconButton aria-label="linkedin" className='icon-btn-style'>
+                    <IconButton aria-label="linkedin" sx={{color:'white'}}>
                         <LinkedInIcon />
                     </IconButton>
                 </Stack>

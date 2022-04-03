@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemDetail from '../components/ItemDetail/ItemDetail'
+import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer'
 
 function ProductsPage({products}) {
   const onAddFx = () => {
@@ -7,9 +7,7 @@ function ProductsPage({products}) {
   }
 
   return (
-    <div>
-      <ItemDetail title={products[3].title} price={products[3].price} author={products[3].author} description={products[3].longDescription} stock={products[3].stock} prodImg={products[3].img} onAdd={onAddFx}/>
-    </div>
+    <ItemDetailContainer products={products} onAdd={onAddFx}/>
   );
 }
 
