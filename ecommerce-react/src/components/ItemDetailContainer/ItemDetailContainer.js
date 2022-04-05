@@ -2,40 +2,42 @@ import './ItemDetailContainer.css'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { Container } from '@mui/material';
 import React, { useEffect, useState } from 'react'
+import mockProducts from '../../mockProducts';
 
-function ItemListDetails({products, onAdd}){
+function ItemDetailContainer({products, id, onAdd}){
     // genero el setItem
-    const [item, setItem] = useState()
+    const [productDetail, setProductDetail] = useState({})
 
-    // genero la función getItem
-    const getItem = () => {
-        return new Promise((resolve) => {
-            setTimeout( () => {
-                return resolve(<ItemDetail 
-                    title={products[3].title}
-                    price={products[3].price}
-                    author={products[3].author}
-                    description={products[3].longDescription}
-                    stock={products[3].stock}
-                    prodImg={products[3].img}
-                    onAdd={onAdd}/>)
-            }, 2000);
-            
+    // obtener product según id
+    const filterProductById = (array, id) => {
+        return array.filter( (product) => {
+            if(product.id == id){
+                return setProductDetail(product)
+            }
         })
     }
 
     // configuro el useEffect para ejecutarse en el ciclo de montaje y actualizar el estado de setItem
     useEffect( () => {
-        getItem().then( (item) => {
-            setItem(item)
-        })
+        filterProductById(mockProducts, id)
     }, [])
     
     return(
-        <Container maxWidth="xl">
-            {item}
-        </Container>
+        <>
+            {console.log(productDetail)}
+            <Container maxWidth="xl">
+                <ItemDetail 
+                        title={productDetail.title}
+                        // preguntar por qué no funciona el productDetail.price
+                        price={100}
+                        author={productDetail.author}
+                        description={productDetail.longDescription}
+                        stock={productDetail.stock}
+                        prodImg={'/../'+productDetail.img}
+                        onAdd={onAdd}/>
+            </Container>
+        </>
     );
 }
 
-export default ItemListDetails
+export default ItemDetailContainer

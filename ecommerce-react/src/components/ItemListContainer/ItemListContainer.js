@@ -26,7 +26,7 @@ function ItemListContainer({title, allProducts}){
                         return(
                             // se crea el Card y se le pasan todas las props basados en el mock
                             <SwiperSlide>
-                                <Item title={product.title} description={product.description} stock={product.stock} price={price} onAdd={onAddFx} itemImg={product.img}/>
+                                <Item title={product.title} description={product.description} stock={product.stock} price={price} onAdd={onAddFx} itemImg={'../'+product.img}/>
                             </SwiperSlide>
                         )
                     })}

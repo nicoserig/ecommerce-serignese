@@ -16,11 +16,11 @@ function NavBar({inCart}){
                         <Link to={'/'}>Home</Link>
                     </Button></li>
                 <li><Button >
-                        <Link to={'/productos'}>Productos</Link>
+                        <Link to={'/category/productos'}>Productos</Link>
                     </Button></li>
                 <li><Button >Nosotros</Button></li>
                 <li><Button >
-                    <Link to={'/contacto'}>Contacto</Link>
+                    <Link to={'/category/contacto'}>Contacto</Link>
                 </Button></li>
                 <li><CartWidget inCart={inCart}/></li>
             </ul>
