@@ -28,7 +28,6 @@ function ItemDetailContainer({products, id, onAdd}){
             <Container maxWidth="xl">
                 <ItemDetail 
                         title={productDetail.title}
-                        // preguntar por qué no funciona el productDetail.price
                         price={productDetail.price}
                         author={productDetail.author}
                         description={productDetail.longDescription}
