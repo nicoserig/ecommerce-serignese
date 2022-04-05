@@ -1,10 +1,6 @@
-import React, {useState, useEffect} from 'react'
-import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
-import ItemListDetails from '../components/ItemListDetails/ItemListDetails';
-
-function ProductsPage() {
   // creo mock de productos
   const mockProducts = [{
+    id: 1,
     title: 'El Club de los Psicópatas',
     author:'John Katzenbach',
     description: 'Suspenso',
@@ -14,6 +10,7 @@ function ProductsPage() {
     img: 'books/book1.jpeg'
 },
 {
+    id: 2,
     title: 'Asesino de Brujas 1, La Bruja Blanca',
     author:'Shelby Mahurin',
     description: 'Ciencia ficción',
@@ -23,6 +20,7 @@ function ProductsPage() {
     img: 'books/book2.jpeg'
 },
 {
+    id: 3,
     title: 'El Italiano',
     author:'Arturo Pérez-Reverte',
     description: 'Ficción y literatura',
@@ -32,6 +30,7 @@ function ProductsPage() {
     img: 'books/book3.jpeg'
 },
 {
+    id: 4,
     title: 'Anhelo',
     author:'Tracy Wolff',
     description: 'Ficción y literatura',
@@ -41,6 +40,7 @@ function ProductsPage() {
     img: 'books/book4.jpeg'
 },
 {
+    id: 5,
     title: 'Proyecto Silverview',
     author:'John Le Carre',
     description: 'Ficción y literatura',
@@ -50,6 +50,7 @@ function ProductsPage() {
     img: 'books/book5.jpeg'
 },
 {
+    id: 6,
     title: 'El día que dejó de nevar en Alaska',
     author: 'Alice Keller',
     description: 'Novela romántica',
@@ -59,6 +60,7 @@ function ProductsPage() {
     img: 'books/book6.jpeg'
 },
 {
+    id: 7,
     title: 'Billy Summers',
     author:'Stephen King',
     description: 'Suspenso',
@@ -68,6 +70,7 @@ function ProductsPage() {
     img: 'books/book7.jpeg'
 },
 {
+    id: 8,
     title: 'El aliento de los dioses',
     author:'Brandon Sanderson',
     description: 'Ciencia ficción',
@@ -77,6 +80,7 @@ function ProductsPage() {
     img: 'books/book8.jpeg'
 },
 {
+    id: 9,
     title: 'El Imperio Final - Nacidos de la Bruma',
     author:'Brandon Sanderson',
     description: 'Ciencia ficción',
@@ -86,7 +90,8 @@ function ProductsPage() {
     img: 'books/book9.jpeg'
 },
 {
-    title: 'El Camino de los Reyes - Archivo de Tormentas',
+    id: 10,
+    title: 'El Camino de los Reyes',
     author:'Brandon Sanderson',
     description: 'Ciencia ficción',
     longDescription: '',
@@ -95,32 +100,4 @@ function ProductsPage() {
     img: 'books/book10.jpeg'
   },];
 
-  // genero el setProducts
-  const [products, setProducts] = useState([])
-
-  // genero la función getProducts
-  const getProducts = () => {
-    return new Promise((resolve) => {
-        setTimeout( () => {
-            return resolve(mockProducts)
-        }, 2000);
-        
-    })
-  }
-
-  // configuro el useEffect para ejecutarse en el ciclo de montaje y actualizar el estado de setProducts con el valor del mock
-  useEffect( () => {
-      getProducts().then( (allProducts) => {
-          setProducts(allProducts)
-      })
-  }, [])
-  
-  return (
-    <div>
-      {/* <ItemListContainer title={'¡Nuevos ingresos!'} allProducts={products}/> */}
-      <ItemListDetails title={'El Imperio Final - Nacidos de la Bruma'} price={3149} description={'Durante mil años han caído cenizas del cielo. Durante mil años nada ha florecido. Durante mil años los skaa han sido esclavizados y viven en la miseria; sumidos en un miedo inevitable. Durante mil años el Lord Legislador ha reinado con poder absoluto; dominando gracias al terror; a sus poderes y a su inmortalidad; ayudado por «obligadores» e «inquisidores»; junto a la poderosa magia de la alomancia. Pero los nobles a menudo han tenido trato sexual con jóvenes skaa y; aunque la ley lo prohíbe; algunos de sus bastardos han sobrevivido y heredado los poderes alománticos: son los «nacidos de la bruma» (mistborn). Ahora; Kelsier; el «superviviente»; el único que ha logrado huir de los Pozos de Hathsin; ha encontrado a Vin; una pobre chica skaa con mucha suerte... Tal vez los dos; con el mejor equipo criminal jamás reunido; unidos a la rebelión que los skaa intentan desde hace mil años; logren cambiar el mundo y acabar con la atroz mano de hierro del Lord Legislador. Pero; ¿qué pasa si el héroe de la profecía falla? '} stock={10} prodImg={'books/book9.jpeg'}/>
-    </div>
-  );
-}
-
-export default ProductsPage;
+  export default mockProducts

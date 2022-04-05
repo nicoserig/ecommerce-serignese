@@ -1,0 +1,28 @@
+.back-home {
+    width: 100%;
+    display:flex;
+    padding: 0px 25px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: rgb(255, 255, 255);
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.div-home {
+    background: linear-gradient(
+        to right, 
+        rgb(91, 92, 107), 
+        rgb(0, 0, 0)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.div-home p{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}

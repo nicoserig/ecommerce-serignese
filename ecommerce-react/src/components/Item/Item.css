@@ -12,5 +12,10 @@
 }
 
 .cardItem{
-    width: 270px;
+    width: 80%;
+}
+
+.cardItem a{
+    text-decoration: none;
+    color: #000;
 }
