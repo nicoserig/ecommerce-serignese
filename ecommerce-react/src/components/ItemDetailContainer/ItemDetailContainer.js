@@ -29,7 +29,7 @@ function ItemDetailContainer({products, id, onAdd}){
                 <ItemDetail 
                         title={productDetail.title}
                         // preguntar por qué no funciona el productDetail.price
-                        price={100}
+                        price={productDetail.price}
                         author={productDetail.author}
                         description={productDetail.longDescription}
                         stock={productDetail.stock}

@@ -3,7 +3,13 @@ import './ItemDetail.css'
 import { Container } from '@mui/material';
 
 function ItemDetail({title, author, description, price, stock, prodImg, onAdd}){
-    let prodPrice = price.toLocaleString('en-US', {style: 'currency', currency:'USD'});
+    let prodPrice;
+    try {
+        prodPrice = price.toLocaleString('en-US', {style: 'currency', currency:'USD'});
+    } catch{
+        prodPrice = price
+    }
+    
     const getStock = (stock) => {
         if(stock === 1){
             return "(1 disponible)"
