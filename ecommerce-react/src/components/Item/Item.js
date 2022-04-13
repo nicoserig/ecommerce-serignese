@@ -8,8 +8,15 @@ import Image from './SM-placeholder.png'
 import './Item.css'
 import { CardActionArea, CardActions } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { useContext, useState } from 'react';
+import { CartContext } from '../../context/CartContext';
 
-export default function Item({id, stock, initial, title, description, price, itemImg = Image, onAdd}) {
+export default function Item({id, stock, initial, title, author, description, price, itemImg = Image, onAdd}) {
+  
+  const { addProduct } = useContext(CartContext)
+
+  const data = {id, stock, initial, title, author, description, price, itemImg}
+
   return (
     
     <Card className='cardItem'>
@@ -35,7 +42,7 @@ export default function Item({id, stock, initial, title, description, price, ite
         </CardActionArea>
       </Link>
       <CardActions>
-        <ItemCount initial={initial} stock={stock} onAdd={onAdd}/>
+        <ItemCount initial={initial} stock={stock} product={data} onAdd={addProduct}/>
       </CardActions>
     </Card>
     

@@ -1,0 +1,22 @@
+.div-container-cartitem{
+    background-color: rgba(0, 0, 0, 0.235);
+    text-align: left;
+    border-radius: 20px;
+}
+
+.div-container-cartitem h1{
+    padding-top: 25px;
+    padding-left: 25px;
+}
+
+.div-container-cartitem p{
+    padding-left: 25px;
+}
+
+.div-data{
+    padding-bottom: 25px;
+}
+
+.cart-item-image{
+    width: 100px;
+}

@@ -1,8 +1,13 @@
+import { useContext } from 'react';
 import ItemCount from '../Item/ItemCount/ItemCount'
 import './ItemDetail.css'
 import { Container } from '@mui/material';
+import { CartContext } from '../../context/CartContext';
 
-function ItemDetail({title, author, description, price, stock, prodImg, onAdd}){
+function ItemDetail({id, initial, title, author, description, price, stock, prodImg}){
+    
+    const { addProduct } = useContext(CartContext)
+    
     let prodPrice;
     try {
         prodPrice = price.toLocaleString('en-US', {style: 'currency', currency:'USD'});
@@ -17,6 +22,8 @@ function ItemDetail({title, author, description, price, stock, prodImg, onAdd}){
             return "(" + String(stock) + " disponibles)"
         }
     }
+
+    const data = {id, stock, initial, title, author, description, price, prodImg}
 
     return(
         <Container maxWidth="xl" className='mui-container'>
@@ -34,7 +41,7 @@ function ItemDetail({title, author, description, price, stock, prodImg, onAdd}){
                                 <p className='price-detail'>{prodPrice}</p>
                                 <p>{getStock(stock)}</p>
                                 <div className='itemCount-detail'>
-                                    <ItemCount stock={stock} onAdd={onAdd}/>
+                                    <ItemCount stock={stock} onAdd={addProduct} product={data}/>
                                 </div>      
                             </div>
                         </div>            

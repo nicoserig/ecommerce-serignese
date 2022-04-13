@@ -26,7 +26,9 @@ function ItemDetailContainer({products, id, onAdd}){
         <>
             {console.log(productDetail)}
             <Container maxWidth="xl">
-                <ItemDetail 
+                <ItemDetail
+                        id={productDetail.id}
+                        initial={1} 
                         title={productDetail.title}
                         price={productDetail.price}
                         author={productDetail.author}

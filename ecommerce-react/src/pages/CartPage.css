@@ -1,0 +1,9 @@
+.main-div-container-cartpage{
+    background-color: rgba(0, 0, 0, 0.235);
+    text-align: center;
+    border-radius: 20px;
+}
+
+.main-div-container-cartpage h1{
+    padding-top: 25px;
+}

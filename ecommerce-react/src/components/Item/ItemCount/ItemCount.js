@@ -4,7 +4,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import './ItemCount.css'
 
 
-function ItemCount({stock=5, initial=0, onAdd}){
+function ItemCount({product, stock=5, initial=0, onAdd}){
     const [count, setCount] = useState(initial);
     
     // permite sumar si el contador no supera stock disponible
@@ -28,7 +28,7 @@ function ItemCount({stock=5, initial=0, onAdd}){
                 <p>{count}</p>
                 <Button onClick={(addCount)}>+</Button>
             </div>
-            <Button onClick={onAdd} sx={{marginTop:'10px'}} className="btn-cart-style" startIcon={<AddShoppingCartIcon/>} variant={'contained'}>Agregar</Button>
+            <Button onClick={() => onAdd(product, count)} sx={{marginTop:'10px'}} className="btn-cart-style" startIcon={<AddShoppingCartIcon/>} variant={'contained'}>Agregar</Button>
         </div>
     );
 }

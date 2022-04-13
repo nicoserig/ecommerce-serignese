@@ -13,6 +13,10 @@ import ProductsAllPage from './pages/ProductsAll';
 import ProductsDetailPage from './pages/ProductDetail'
 import NotFoundPage from './pages/NotFound';
 import ContactPage from './pages/Contact';
+import CartPage from './pages/CartPage';
+
+// context
+import CartProvider from './context/CartContext';
 
 // data
 import mockProducts from './mockProducts'
@@ -41,20 +45,20 @@ function App() {
   }, [])
   
   return (
-    <div>
-      {console.log("Productos app:" , products)}
-      <BrowserRouter>
-        <NavBar inCart={0}/>
-        <Routes>
-          <Route path='/' element={<HomePage products={products}/>}/>
-          <Route path='/category/productos' element={<ProductsAllPage products={products}/>}/>
-          <Route path='/category/productos/:id' element={<ProductsDetailPage products={products}/>}/>
-          <Route path='/category/contacto' element={<ContactPage />}/>
-          <Route path='*' element={<NotFoundPage />}/>
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </div>
+      <CartProvider>
+        <BrowserRouter>
+          <NavBar inCart={0}/>
+          <Routes>
+            <Route path='/' element={<HomePage products={products}/>}/>
+            <Route path='/category/productos' element={<ProductsAllPage products={products}/>}/>
+            <Route path='/category/productos/:id' element={<ProductsDetailPage products={products}/>}/>
+            <Route path='/category/contacto' element={<ContactPage />}/>
+            <Route path='/cart' element={<CartPage />}/>
+            <Route path='*' element={<NotFoundPage />}/>
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </CartProvider>
   );
 }
 
