@@ -31,3 +31,9 @@
 .btn-cart-style:hover{
     background-color: grey;
 }
+
+.agregado-label{
+    font-size: 20px;
+    font-weight: 400;
+    color:rgb(46, 119, 34);
+}

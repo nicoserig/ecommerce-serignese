@@ -6,6 +6,7 @@ import './ItemCount.css'
 
 function ItemCount({product, stock=5, initial=1, onAdd}){
     const [count, setCount] = useState(initial);
+    const [flag, setFlag] = useState(true);
     
     // permite sumar si el contador no supera stock disponible
     const addCount = () =>{
@@ -23,12 +24,21 @@ function ItemCount({product, stock=5, initial=1, onAdd}){
 
     return(
         <div className='main-div'>
-            <div className='box'>
-                <Button onClick={(subCount)}>-</Button>
-                <p>{count}</p>
-                <Button onClick={(addCount)}>+</Button>
-            </div>
-            <Button onClick={() => onAdd(product, count)} sx={{marginTop:'10px'}} className="btn-cart-style" startIcon={<AddShoppingCartIcon/>} variant={'contained'}>Agregar</Button>
+            {
+                flag === true &&
+                    <>
+                        <div className='box'>
+                            <Button onClick={(subCount)}>-</Button>
+                            <p>{count}</p>
+                            <Button onClick={(addCount)}>+</Button>
+                        </div>
+                            <Button onClick={() => {onAdd(product, count);setFlag(false)}} sx={{marginTop:'10px'}} className="btn-cart-style" startIcon={<AddShoppingCartIcon/>} variant={'contained'}>Agregar</Button>
+                    </>
+            }
+            {
+                flag === false &&
+                <p className='agregado-label'>¡Agregado a carrito!</p>
+            }
         </div>
     );
 }
