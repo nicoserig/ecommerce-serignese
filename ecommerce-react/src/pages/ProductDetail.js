@@ -12,8 +12,6 @@ function ProductsDetailPage({products}) {
 
   return (
     <>
-      {console.log("ID Param: ", id)}
-      {console.log("Productos detail page:" , products)}
       <ItemDetailContainer products={products} onAdd={onAddFx} id={id}/>
     </>
   );

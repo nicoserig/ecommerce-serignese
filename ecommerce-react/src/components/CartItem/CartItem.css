@@ -2,11 +2,16 @@
     background-color: rgba(0, 0, 0, 0.235);
     text-align: left;
     border-radius: 20px;
+    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.479);
+    display:grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: "cover content";
 }
 
 .div-container-cartitem h1{
     padding-top: 25px;
     padding-left: 25px;
+    font-size: 20px;
 }
 
 .div-container-cartitem p{
@@ -15,8 +20,20 @@
 
 .div-data{
     padding-bottom: 25px;
+    
+}
+.cart-item-image{
+    width: 170px;
 }
 
-.cart-item-image{
-    width: 100px;
+.button-cart-item-style{
+    color: white;
+    background-color: black;
+    margin-left: 23px;
+}
+
+.button-cart-item:hover{
+    color: white;
+    background-color: rgb(50, 50, 50);
+    margin-left: 23px;
 }

@@ -44,7 +44,6 @@ function ItemDetailContainer({products, id, onAdd}){
     
     return(
         <>
-            {console.log("Productos final:" , products)}
             <Container maxWidth="xl">
                 {itemDetail}
             </Container>

@@ -2,8 +2,6 @@ import React, { useEffect } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import Item from '../Item/Item';
 import './ItemListContainer.css'
-import { useState, useContext } from 'react';
-import { CartContext } from '../../context/CartContext';
 
 // Import Swiper styles
 import "swiper/css";
@@ -14,12 +12,6 @@ import "swiper/css/navigation";
 import { Keyboard, Navigation, Pagination } from "swiper";
 
 function ItemListContainer({title, allProducts}){
-    
-    const { cartProducts, addProduct } = useContext(CartContext)
-
-    useEffect( () => {
-        console.log("cartProducts: ",cartProducts)
-    },[])
 
     const onAddFx = () => {
         alert("Add to cart - Placeholder")

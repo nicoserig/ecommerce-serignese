@@ -24,7 +24,6 @@ function ItemDetailContainer({products, id, onAdd}){
     
     return(
         <>
-            {console.log(productDetail)}
             <Container maxWidth="xl">
                 <ItemDetail
                         id={productDetail.id}

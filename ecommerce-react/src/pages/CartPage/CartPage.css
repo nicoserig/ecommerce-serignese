@@ -1,0 +1,28 @@
+.main-div-container-cartpage{
+    background-color: rgba(0, 0, 0, 0.235);
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.479);
+}
+
+.main-div-container-cartpage h1{
+    padding-top: 25px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.total-price-p{
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.no-products-label{
+    padding-bottom: 20px;
+}
+
+.no-products-div Button a {
+    text-decoration: none;
+    color: white;
+    font-family: Tahoma;
+}

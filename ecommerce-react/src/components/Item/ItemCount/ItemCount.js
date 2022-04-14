@@ -4,7 +4,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import './ItemCount.css'
 
 
-function ItemCount({product, stock=5, initial=0, onAdd}){
+function ItemCount({product, stock=5, initial=1, onAdd}){
     const [count, setCount] = useState(initial);
     
     // permite sumar si el contador no supera stock disponible

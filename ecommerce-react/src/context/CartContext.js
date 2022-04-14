@@ -8,17 +8,6 @@ const CartProvider = ({children}) => {
     const addProduct = (product, qty) => {
         let exist = cartProducts.find(cartProduct => cartProduct.id === product.id)
         !exist && setCartProducts(cartProducts => [...cartProducts, {...product, qty:qty}])
-        console.log(cartProducts)
-    }
-
-    const calculeTotalPrice = () => {
-        let total = 0
-
-        cartProducts.map( (cartProduct) => {
-           total = cartProduct.price + total
-        })
-
-        return total
     }
 
     const deleteProduct = (product) => {
@@ -28,7 +17,6 @@ const CartProvider = ({children}) => {
     const data = {
         cartProducts,
         addProduct,
-        calculeTotalPrice,
         deleteProduct
     }
 

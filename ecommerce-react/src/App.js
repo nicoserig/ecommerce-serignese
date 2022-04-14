@@ -13,7 +13,7 @@ import ProductsAllPage from './pages/ProductsAll';
 import ProductsDetailPage from './pages/ProductDetail'
 import NotFoundPage from './pages/NotFound';
 import ContactPage from './pages/Contact';
-import CartPage from './pages/CartPage';
+import CartPage from './pages/CartPage/CartPage';
 
 // context
 import CartProvider from './context/CartContext';
